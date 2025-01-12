@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "generate": {
+      "outputs": ["src/gen/**"],
+      "dependsOn": ["^generate"]
+    },
+    "build": {
+      "outputs": ["bp_modules/**", ".botpress/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "@botpress/client#build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "@botpress/chat#build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "@botpress/sdk#build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "@botpress/cli#build": {
+      "outputs": ["dist/**", "templates/*/.botpress/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "check:type": {},
+    "check:bplint": {}
+  }
+}

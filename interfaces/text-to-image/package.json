@@ -1,0 +1,17 @@
+{
+  "name": "@botpresshub/text-to-image",
+  "description": "Text-to-image interface for Botpress integrations",
+  "private": true,
+  "scripts": {
+    "check:type": "tsc --noEmit",
+    "check:bplint": "bp lint"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@botpress/common": "workspace:*",
+    "@botpress/sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@botpress/cli": "workspace:*"
+  }
+}

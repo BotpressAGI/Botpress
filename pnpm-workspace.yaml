@@ -1,0 +1,7 @@
+packages:
+  - packages/*
+  - packages/cli/templates/*
+  - integrations/*
+  - interfaces/*
+  - bots/*
+  - plugins/*
