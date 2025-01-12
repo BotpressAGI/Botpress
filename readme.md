@@ -8,11 +8,11 @@
 [![@botpress/sdk](https://img.shields.io/badge/@botpress%2fsdk-black?logo=npm)](https://www.npmjs.com/package/@botpress/sdk)
 [![@botpress/cli](https://img.shields.io/badge/@botpress%2fcli-black?logo=npm)](https://www.npmjs.com/package/@botpress/cli)
 
-[Botpress](https://botpress.com) is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+[Botpress] is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
-[Cloud](https://app.botpress.cloud) •
-[Documentation](https://botpress.com/docs) •
+[Cloud] •
+[Documentation]  •
 [Integrations](#integrations) •
 [Agents](#agents)
 
@@ -24,10 +24,10 @@
 
 This repository contains:
 
-- [**Integrations**](#integrations) – all public integrations on the [Botpress Hub](https://app.botpress.cloud/hub) maintained by Botpress
+- [**Integrations**](#integrations) – all public integrations on the [Botpress Hub] maintained by Botpress
 - [**Devtools**](#devtools) – all Botpress Cloud dev tools (CLI, SDK, API Client)
 - [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [Botpress Studio](https://studio.botpress.cloud) **(coming soon)**
+- [**Agents**](#agents) – all public agents on the [Botpress Studio] **(coming soon)**
 
 ## Contributing
 
@@ -35,9 +35,7 @@ We love contributions from the community!
 
 We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
 
-For bugs or features related to the API, Botpress Dashboard or the Botpress Studio, please talk to us on [Discord](https://discord.gg/botpress) instead!
-
-For any problem related to on-premise Botpress v12, please see the [Botpress v12 repository](https://github.com/botpress/v12).
+For any problem related to on-premise Botpress v12, please see the [Botpress v12 repository](https://github.com/BotpressWebchat/botpress/).
 
 ## Integrations
 
@@ -65,7 +63,7 @@ _This step can be executed in any directory and git repository of your choice. Y
 
 You can then modify both the definition and implementation of your integration respectively located in the `integration.definition.ts` and `src/index.ts` files.
 
-For more information on how to develop an integration, please refer to the [Documentation](https://botpress.com/docs/getting-started-1).
+For more information on how to develop an integration, please refer to the [Documentation].
 
 ### Integration Deployment
 
@@ -83,7 +81,7 @@ By default, all integrations are private to the workspace they have been deploye
 bp deploy --public
 ```
 
-This will make your integration available to all Botpress users on the [Botpress Hub](https://app.botpress.cloud/hub). Once a version of your integration is public, it cannot be updated again.
+This will make your integration available to all Botpress users on the [Botpress Hub]. Once a version of your integration is public, it cannot be updated again.
 
 ## Bots
 
@@ -99,7 +97,7 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 | **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
 | -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@botpress/cli`](https://www.npmjs.com/package/@botpress/cli)       | Build and deploy private or public integrations | [Docs](https://botpress.com/docs/integration/cli/) | [Code](./packages/cli) |
+| [`@botpress/cli`](https://www.npmjs.com/package/@botpress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
 | [`@botpress/client`](https://www.npmjs.com/package/@botpress/client) | Type-safe client to consume the Botpress APIs   | [Docs]()                                           | [Code]()               |
 | [`@botpress/sdk`](https://www.npmjs.com/package/@botpress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
 
@@ -125,7 +123,7 @@ The development environment requires the following tools to be installed:
 
 ```sh
 # Clone the repository
-git clone https://github.com/botpress/botpress.git
+git clone https://github.com/BotpressWebchat/botpress.git
 cd botpress
 
 # Install dependencies
