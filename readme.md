@@ -1,7 +1,11 @@
 <div align="center">
 
 # Botpress Webchat
+<div>
+CA:xxxxxxxxxxxxxxx
+[PUMP](https://pump.fun/coin/)  
 [website](https://www.botpresswebchat.xyz/)
+</div>
 [![@botpress/sdk](https://img.shields.io/badge/@botpress%2fsdk-black?logo=npm)](https://www.npmjs.com/package/@botpress/sdk)
 [![@botpress/cli](https://img.shields.io/badge/@botpress%2fcli-black?logo=npm)](https://www.npmjs.com/package/@botpress/cli)
 
