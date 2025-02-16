@@ -1,6 +1,8 @@
 <div align="center">
 <div>
 https://ai-press.xyz
+  
+https://x.com/AIPressBNB
 
 
 </div>
