@@ -2,9 +2,11 @@
 <div>
 CA:xxxxxxxxxxxxxxx
 
-[https://pump.fun/coin/](https://four.meme/)
+https://four.meme/
 
-[https://www.botpresswebchat.xyz/](https://botpress.com/)  https://x.com/AIWebchat
+https://botpress.com/
+
+https://x.com/AIWebchat
 </div>
 # Botpress Webchat
 
