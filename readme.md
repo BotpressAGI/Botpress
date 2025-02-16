@@ -1,149 +1,214 @@
-<div align="center">
-<div>
+CeleryAI
+Note
 
-CA : 0x2bdeea82afafee9c11a9bdfe1b085dd166c93f94
+The original CeleryAI from March 2023 introduced task planning as a method for developing autonomous agents. This project has been archived and moved to the CeleryAI_archive repo (September 2024 snapshot).
 
-https://four.meme/token/0x2bdeea82afafee9c11a9bdfe1b085dd166c93f94
+Caution
 
-https://ai-press.xyz
-  
-https://x.com/AIPressBNB
+This is a framework built by Yohei who has never held a job as a developer. The purpose of this repo is to share ideas and spark discussion and for experienced devs to play with. Not meant for production use. Use with cautioun.
 
+This newest CeleryAI is an experimental framework for a self-building autonomous agent. Earlier efforts to expand CeleryAI have made it clear that the optimal way to build a general autonomous agent is to build the simplest thing that can build itself.
 
-</div>
-# AIPress
+Check out this introductory X/Twitter thread for a simple overview.
 
+The core is a new function framework (functionz) for storing, managing, and executing functions from a database. It offers a graph-based structure for tracking imports, dependent functions, and authentication secrets, with automatic loading and comprehensive logging capabilities. Additionally, it comes with a dashboard for managing functions, running updates, and viewing logs.
 
-AIPress is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+Table of Contents
+Quick Start
+Basic Usage
+Function Metadata
+Function Loading
+Key Dependencies
+Execution Environment
+Log
+Dashboard
+Pre-loaded Functions
+Future/Draft Features
+API Reference
+Contributing
+License
+Quick Start
+To quickly check out the dashboard and see how it works:
 
-[Getting started](#getting-started) •
-[Cloud] •
-[Documentation]  •
-[Integrations](#integrations) •
-[Agents](#agents)
+Install CeleryAI:
 
-<img src="https://user-images.githubusercontent.com/10071388/248040379-8aee1b03-c483-4040-8ee0-741554310e88.png" width="800">
-  
-</div>
+pip install CeleryAI
+Import CeleryAI and load the dashboard:
 
-## This Repository
+import CeleryAI
 
-This repository contains:
+if __name__ == "__main__":
+    app = CeleryAI.create_app('/dashboard')
+    app.run(host='0.0.0.0', port=8080)
+Navigate to the dashboard:
 
-- [**Integrations**](#integrations) – all public integrations on the [AIPress Hub] maintained by AIPress
-- [**Devtools**](#devtools) – all AIPress Cloud dev tools (CLI, SDK, API Client)
-- [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [AIPress Studio] **(coming soon)**
+Open your browser and go to http://localhost:8080/dashboard to access the CeleryAI dashboard.
 
-## Contributing
+Basic Usage
+Start by importing CeleryAI and registering your functions. Here's how to register two functions, where one depends on the other:
 
-We love contributions from the community!
+import CeleryAI
 
-We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
+# Register a simple function
+@CeleryAI.register_function()
+def world():
+    return "world"
 
-For any problem related to on-premise AIPress v12, please see the [AIPress v12 repository](https://github.com/AIPressWebchat/AIPress/).
+# Register a function that depends on 'world'
+@CeleryAI.register_function(dependencies=["world"])
+def hello_world():
+    x = world()
+    return f"Hello {x}!"
 
-## Integrations
+# Execute the function
+print(CeleryAI.hello_world())  # Output: Hello world!
 
-The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to AIPress Cloud.
+if __name__ == "__main__":
+    app = CeleryAI.create_app('/dashboard')
+    app.run(host='0.0.0.0', port=8080)
+Function Metadata
+Functions can be registered with metadata to enhance their capabilities and manage their relationships. Here's a more comprehensive example of function metadata, showing logical usage of all fields:
 
-### Integration Development
+import CeleryAI
 
-To develop an integration, start by installing the [AIPress CLI](https://www.npmjs.com/package/@AIPress/cli):
+@CeleryAI.register_function(
+    imports=["math"],
+    dependencies=["circle_area"],
+    key_dependencies=["openai_api_key"],
+    metadata={
+        "description": "Calculates the volume of a cylinder using the circle_area function."
+    }
+)
+def cylinder_volume(radius, height):
+    import math
+    area = circle_area(radius)
+    return area * height
+Available Metadata Fields:
 
-```sh
-npm install -g @AIPress/cli # for npm
-yarn global add @AIPress/cli # for yarn
-pnpm install -g @AIPress/cli # for pnpm
-```
+imports: List of external libraries the function depends on.
+dependencies: List of other functions this function depends on.
+key_dependencies: List of secret keys required by the function.
+metadata["description"]: A description of what the function does.
+Function Loading
+In addition to using register_function, you can use load_function to load plugins or draft packs of functions. CeleryAI comes with built-in function packs, or you can load your own packs by pointing to the file path.
 
-Then, in the directory of your choice, create a new integration:
+You can find available function packs in CeleryAI/functionz/packs.
 
-```sh
-bp init
-```
+Loading Custom Function Packs:
 
-This command will generate an integration from one of the proposed templates.
+import CeleryAI
 
-_This step can be executed in any directory and git repository of your choice. You don't have to fork this repository to create an integration._
+# Load your custom function pack
+CeleryAI.load_functions("path/to/your/custom_functions.py")
+This approach makes function building and management easier by organizing related functions into packs.
 
-You can then modify both the definition and implementation of your integration respectively located in the `integration.definition.ts` and `src/index.ts` files.
+Key Dependencies
+You can store key_dependencies directly from your code or manage them via the dashboard.
 
-For more information on how to develop an integration, please refer to the [Documentation].
+Storing Key Dependencies from Code:
 
-### Integration Deployment
+import CeleryAI
 
-To try out your integration, you can deploy its current version to your workspace using the AIPress CLI:
+# Add a secret key
+CeleryAI.add_key_wrapper('openai_api_key', 'your_openai_api_key')
+Adding Key Dependencies via Dashboard:
 
-```sh
-bp deploy
-```
+Navigate to the dashboard and use the add_key_wrapper feature to securely add your secret keys.
 
-This will deploy your integration's current version to your workspace and make it available to all your bots. If this version is already deployed, it will be updated. Otherwise, a new version will be created.
+Execution Environment
+CeleryAI automatically loads essential function packs and manages their dependencies, ensuring a seamless execution environment. Additionally, it logs all activities, including the relationships between functions, to provide comprehensive tracking of function executions and dependencies.
 
-By default, all integrations are private to the workspace they have been deployed in. When you are ready to share your version with the community, you can make it public by running:
+Log
+CeleryAI implements a comprehensive logging system to track all function executions and their interactions. The logging mechanism ensures that every function call, including its inputs, outputs, execution time, and any errors, is recorded for monitoring and debugging purposes.
 
-```sh
-bp deploy --public
-```
+Key Logging Features:
 
-This will make your integration available to all AIPress users on the [AIPress Hub]. Once a version of your integration is public, it cannot be updated again.
+Execution Tracking: Logs when a function starts and finishes execution, including the function name, arguments, keyword arguments, and execution time.
 
-## Bots
+Error Logging: Captures and logs any errors that occur during function execution, providing detailed error messages for troubleshooting.
 
-The [`/bots`](./bots) folder contains examples of bots "_as code_" made only using the client, the SDK and the CLI.
+Dependency Management: Automatically resolves and logs dependencies between functions, ensuring that all required functions and libraries are loaded before execution.
 
-**This is not the recommended way to build bots** and is in no way a replacement for the AIPress Studio.
+Trigger Logging: Logs the execution of triggered functions, detailing which functions were triggered by others and their respective execution outcomes.
 
-However it can be useful for experienced developers who want to build bots in a more programmatic way.
+Comprehensive Records: Maintains a history of all function executions, enabling users to review past activities, understand function relationships, and analyze performance metrics.
 
-It is also used internally by the Botress team since the Studio and CLI both use the same underlying primitives.
+How Triggers Work:
 
-## Devtools
+Triggers are mechanisms that allow certain functions to be automatically executed in response to specific events or actions within the system. For example, when a function is added or updated, a trigger can initiate the generation of a description for that function.
 
-| **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
-| -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@AIPress/cli`](https://www.npmjs.com/package/@AIPress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
-| [`@AIPress/client`](https://www.npmjs.com/package/@AIPress/client) | Type-safe client to consume the AIPress APIs   | [Docs]()                                           | [Code]()               |
-| [`@AIPress/sdk`](https://www.npmjs.com/package/@AIPress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
+Triggers enhance the autonomy of CeleryAI by enabling automated workflows and reducing the need for manual intervention. However, it's essential to manage triggers carefully to avoid unintended recursive executions or conflicts between dependent functions.
 
-## Agents
+Dashboard
+The CeleryAI dashboard offers a user-friendly interface for managing functions, monitoring executions, and handling configurations. Key features include:
 
-Coming soon.
+Function Management: Register, deregister, and update functions directly from the dashboard.
 
-## Local Development
+Dependency Visualization: View and manage dependencies between functions to understand their relationships.
 
-### Prerequisites
+Secret Key Management: Add and manage secret keys securely through the dashboard interface.
 
-The development environment requires the following tools to be installed:
+Logging and Monitoring: Access comprehensive logs of function executions, including inputs, outputs, and execution times.
 
-- [`git`](https://git-scm.com/): Git is a free and open source distributed version control system.
-- [`node`](https://nodejs.org/en/): Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-- [`pnpm`](https://pnpm.io/): PNPM is a fast, disk space efficient package manager.
+Trigger Management: Set up triggers to automate function executions based on specific events or conditions.
 
-#### Windows-specific prerequisites
+Accessing the Dashboard:
 
-- [Microsoft Visual C++ Redistributable for Visual Studio 2015-2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist#visual-studio-2015-2017-2019-and-2022)
+After running your application, navigate to http://localhost:8080/dashboard to access the CeleryAI dashboard.
 
-### Building from sources
+Pre-loaded Functions Summary
+CeleryAI includes two pre-loaded function packs:
 
-```sh
-# Clone the repository
-git clone https://github.com/AIPressWebchat/AIPress.git
-cd AIPress
+Default Functions (packs/default_functions.py):
 
-# Install dependencies
-pnpm install
+Function Execution: Run, add, update, or retrieve functions and versions.
+Key Management: Add and retrieve secret keys.
+Triggers: Add triggers to execute functions based on others.
+Logs: Retrieve logs with optional filters.
+AI Functions (packs/ai_generator.py):
 
-# Build all packages
-pnpm run build
+AI Description & Embeddings: Auto-generate descriptions and embeddings for functions.
+Function Selection: Find or choose similar functions based on prompts.
+Running a Self-Building Agent
+CeleryAI includes two experimental self-building agents, showcasing how the framework can help a self-building coding agent leverage existing functions to write new ones.
 
-# Run Checks
-pnpm run check
-```
+1. process_user_input in the code_writing_functions pack
+This function first determines whether to use an existing function or generate new ones. If new functions are needed, it breaks them down into smaller reusable components and combines them into a final function.
 
-## Licensing
+Try this:
 
-All packages in this repository are open-source software and licensed under the [MIT License](LICENSE). By contributing in this repository, you agree to release your code under this license as well.
+import CeleryAI
 
-Let's build the future of chatbot development together! 🤖🚀
+CeleryAI.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
+CeleryAI.load_functions("drafts/code_writing_functions")
+
+CeleryAI.process_user_input("Grab today's score from ESPN and email it to test@test.com")
+When you run this, you will see the functions being generated in the shell and new functions will be available in the dashboard once completed.
+
+2. self_build in the self_build pack
+This function takes a user description and generates X distinct tasks that a user might ask an AI assistant. Each task is processed by process_user_input, creating new functions if no existing ones suffice.
+
+Try this:
+
+import CeleryAI
+
+CeleryAI.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
+CeleryAI.load_functions("drafts/code_writing_functions")
+CeleryAI.load_functions("drafts/self_build")
+
+CeleryAI.self_build("A sales person at an enterprise SaaS company.", 3)
+This will generate 3 distinct tasks a salesperson might ask an AI assistant and create functions to handle those.
+
+*The functions will be generated and stored in the dashboard, but note that the generated code is minimal and may need improvement.
+
+alt text
+
+Warning: These draft features are experimental concepts and may not function as intended. They require significant improvements and should be used with caution.
+
+Contributing
+Contributions are greatly appreciatedly, but candidly I have not been great at managing PRs. Please be patient as things will move slow while I am working on this alone (on nights and weekends). I may start by building a small core crew before collaborating with a larger group.
+
+If you are a dev, investor, friend of open-source and interesting supporting AI work I do, please fill this form (I have a few fun initiatives coming up!)
+
+License
+CeleryAI is released under the MIT License. See the LICENSE file for more details.
