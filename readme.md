@@ -1,5 +1,9 @@
 # CeleryAI
 
+https://celeryai.xyz
+
+https://x.com/CeleryAI_BSC
+
 > [!NOTE]
 > The original CeleryAI from March 2023 introduced task planning as a method for developing autonomous agents. This project has been archived and moved to the [CeleryAI_archive](https://github.com/CeleryAI/CeleryAI) repo (September 2024 snapshot).
 
