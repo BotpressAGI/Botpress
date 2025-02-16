@@ -2,10 +2,10 @@
 <div>
 
 </div>
-# Botpress
+# IgnisMind
 
 
-Botpress is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+IgnisMind is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
 [Cloud] •
@@ -21,10 +21,10 @@ Botpress is the ultimate platform for building **next-generation chatbots** and 
 
 This repository contains:
 
-- [**Integrations**](#integrations) – all public integrations on the [Botpress Hub] maintained by Botpress
-- [**Devtools**](#devtools) – all Botpress Cloud dev tools (CLI, SDK, API Client)
+- [**Integrations**](#integrations) – all public integrations on the [IgnisMind Hub] maintained by IgnisMind
+- [**Devtools**](#devtools) – all IgnisMind Cloud dev tools (CLI, SDK, API Client)
 - [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [Botpress Studio] **(coming soon)**
+- [**Agents**](#agents) – all public agents on the [IgnisMind Studio] **(coming soon)**
 
 ## Contributing
 
@@ -32,20 +32,20 @@ We love contributions from the community!
 
 We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
 
-For any problem related to on-premise Botpress v12, please see the [Botpress v12 repository](https://github.com/BotpressWebchat/Botpress/).
+For any problem related to on-premise IgnisMind v12, please see the [IgnisMind v12 repository](https://github.com/IgnisMindWebchat/IgnisMind/).
 
 ## Integrations
 
-The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to Botpress Cloud.
+The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to IgnisMind Cloud.
 
 ### Integration Development
 
-To develop an integration, start by installing the [Botpress CLI](https://www.npmjs.com/package/@Botpress/cli):
+To develop an integration, start by installing the [IgnisMind CLI](https://www.npmjs.com/package/@IgnisMind/cli):
 
 ```sh
-npm install -g @Botpress/cli # for npm
-yarn global add @Botpress/cli # for yarn
-pnpm install -g @Botpress/cli # for pnpm
+npm install -g @IgnisMind/cli # for npm
+yarn global add @IgnisMind/cli # for yarn
+pnpm install -g @IgnisMind/cli # for pnpm
 ```
 
 Then, in the directory of your choice, create a new integration:
@@ -64,7 +64,7 @@ For more information on how to develop an integration, please refer to the [Docu
 
 ### Integration Deployment
 
-To try out your integration, you can deploy its current version to your workspace using the Botpress CLI:
+To try out your integration, you can deploy its current version to your workspace using the IgnisMind CLI:
 
 ```sh
 bp deploy
@@ -78,13 +78,13 @@ By default, all integrations are private to the workspace they have been deploye
 bp deploy --public
 ```
 
-This will make your integration available to all Botpress users on the [Botpress Hub]. Once a version of your integration is public, it cannot be updated again.
+This will make your integration available to all IgnisMind users on the [IgnisMind Hub]. Once a version of your integration is public, it cannot be updated again.
 
 ## Bots
 
 The [`/bots`](./bots) folder contains examples of bots "_as code_" made only using the client, the SDK and the CLI.
 
-**This is not the recommended way to build bots** and is in no way a replacement for the Botpress Studio.
+**This is not the recommended way to build bots** and is in no way a replacement for the IgnisMind Studio.
 
 However it can be useful for experienced developers who want to build bots in a more programmatic way.
 
@@ -94,9 +94,9 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 | **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
 | -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@Botpress/cli`](https://www.npmjs.com/package/@Botpress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
-| [`@Botpress/client`](https://www.npmjs.com/package/@Botpress/client) | Type-safe client to consume the Botpress APIs   | [Docs]()                                           | [Code]()               |
-| [`@Botpress/sdk`](https://www.npmjs.com/package/@Botpress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
+| [`@IgnisMind/cli`](https://www.npmjs.com/package/@IgnisMind/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
+| [`@IgnisMind/client`](https://www.npmjs.com/package/@IgnisMind/client) | Type-safe client to consume the IgnisMind APIs   | [Docs]()                                           | [Code]()               |
+| [`@IgnisMind/sdk`](https://www.npmjs.com/package/@IgnisMind/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
 
 ## Agents
 
@@ -120,8 +120,8 @@ The development environment requires the following tools to be installed:
 
 ```sh
 # Clone the repository
-git clone https://github.com/BotpressWebchat/Botpress.git
-cd Botpress
+git clone https://github.com/IgnisMindWebchat/IgnisMind.git
+cd IgnisMind
 
 # Install dependencies
 pnpm install
