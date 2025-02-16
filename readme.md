@@ -1,12 +1,6 @@
 <div align="center">
 <div>
-CA:0xb874d79aabb64be0cfc1537d02f7e31c76880945
-  
-https://four.meme/token/0xb874d79aabb64be0cfc1537d02f7e31c76880945
-  
-https://x.com/BotpressAGI
 
-https://botpressagi.xyz/
 </div>
 # Botpress
 
