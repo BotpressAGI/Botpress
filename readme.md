@@ -2,11 +2,6 @@
 <div>
 https://botpress.com/
 
-CA : 0x7678a20459a1106f6271a14db8793078a8971c20
-
-https://four.meme/token/0x7678a20459a1106f6271a14db8793078a8971c20
-
-https://x.com/AIWebchat
 
 </div>
 # Botpress Webchat
