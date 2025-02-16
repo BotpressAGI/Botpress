@@ -1,10 +1,5 @@
 <div align="center">
 <div>
-CA:0x582cb7060f8af5a4e2c579c7ca0d0779d28ba3a5
-  
-https://four.meme/token/0x582cb7060f8af5a4e2c579c7ca0d0779d28ba3a5
-
-https://botpress.com/
 
 https://x.com/AIWebchat
 </div>
