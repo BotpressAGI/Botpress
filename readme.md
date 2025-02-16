@@ -1,15 +1,13 @@
 <div align="center">
 <div>
-https://botpress.com/
+https://ai-press.xyz
 
 
 </div>
-# Botpress Webchat
+# AIPress
 
-[![@botpress/sdk](https://img.shields.io/badge/@botpress%2fsdk-black?logo=npm)](https://www.npmjs.com/package/@botpress/sdk)
-[![@botpress/cli](https://img.shields.io/badge/@botpress%2fcli-black?logo=npm)](https://www.npmjs.com/package/@botpress/cli)
 
-Botpress is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+AIPress is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
 [Cloud] •
@@ -25,10 +23,10 @@ Botpress is the ultimate platform for building **next-generation chatbots** and 
 
 This repository contains:
 
-- [**Integrations**](#integrations) – all public integrations on the [Botpress Hub] maintained by Botpress
-- [**Devtools**](#devtools) – all Botpress Cloud dev tools (CLI, SDK, API Client)
+- [**Integrations**](#integrations) – all public integrations on the [AIPress Hub] maintained by AIPress
+- [**Devtools**](#devtools) – all AIPress Cloud dev tools (CLI, SDK, API Client)
 - [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [Botpress Studio] **(coming soon)**
+- [**Agents**](#agents) – all public agents on the [AIPress Studio] **(coming soon)**
 
 ## Contributing
 
@@ -36,20 +34,20 @@ We love contributions from the community!
 
 We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
 
-For any problem related to on-premise Botpress v12, please see the [Botpress v12 repository](https://github.com/BotpressWebchat/botpress/).
+For any problem related to on-premise AIPress v12, please see the [AIPress v12 repository](https://github.com/AIPressWebchat/AIPress/).
 
 ## Integrations
 
-The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to Botpress Cloud.
+The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to AIPress Cloud.
 
 ### Integration Development
 
-To develop an integration, start by installing the [Botpress CLI](https://www.npmjs.com/package/@botpress/cli):
+To develop an integration, start by installing the [AIPress CLI](https://www.npmjs.com/package/@AIPress/cli):
 
 ```sh
-npm install -g @botpress/cli # for npm
-yarn global add @botpress/cli # for yarn
-pnpm install -g @botpress/cli # for pnpm
+npm install -g @AIPress/cli # for npm
+yarn global add @AIPress/cli # for yarn
+pnpm install -g @AIPress/cli # for pnpm
 ```
 
 Then, in the directory of your choice, create a new integration:
@@ -68,7 +66,7 @@ For more information on how to develop an integration, please refer to the [Docu
 
 ### Integration Deployment
 
-To try out your integration, you can deploy its current version to your workspace using the Botpress CLI:
+To try out your integration, you can deploy its current version to your workspace using the AIPress CLI:
 
 ```sh
 bp deploy
@@ -82,13 +80,13 @@ By default, all integrations are private to the workspace they have been deploye
 bp deploy --public
 ```
 
-This will make your integration available to all Botpress users on the [Botpress Hub]. Once a version of your integration is public, it cannot be updated again.
+This will make your integration available to all AIPress users on the [AIPress Hub]. Once a version of your integration is public, it cannot be updated again.
 
 ## Bots
 
 The [`/bots`](./bots) folder contains examples of bots "_as code_" made only using the client, the SDK and the CLI.
 
-**This is not the recommended way to build bots** and is in no way a replacement for the Botpress Studio.
+**This is not the recommended way to build bots** and is in no way a replacement for the AIPress Studio.
 
 However it can be useful for experienced developers who want to build bots in a more programmatic way.
 
@@ -98,9 +96,9 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 | **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
 | -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@botpress/cli`](https://www.npmjs.com/package/@botpress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
-| [`@botpress/client`](https://www.npmjs.com/package/@botpress/client) | Type-safe client to consume the Botpress APIs   | [Docs]()                                           | [Code]()               |
-| [`@botpress/sdk`](https://www.npmjs.com/package/@botpress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
+| [`@AIPress/cli`](https://www.npmjs.com/package/@AIPress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
+| [`@AIPress/client`](https://www.npmjs.com/package/@AIPress/client) | Type-safe client to consume the AIPress APIs   | [Docs]()                                           | [Code]()               |
+| [`@AIPress/sdk`](https://www.npmjs.com/package/@AIPress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
 
 ## Agents
 
@@ -124,8 +122,8 @@ The development environment requires the following tools to be installed:
 
 ```sh
 # Clone the repository
-git clone https://github.com/BotpressWebchat/botpress.git
-cd botpress
+git clone https://github.com/AIPressWebchat/AIPress.git
+cd AIPress
 
 # Install dependencies
 pnpm install
