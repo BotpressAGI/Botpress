@@ -3,6 +3,8 @@
 
 CA : 0x2bdeea82afafee9c11a9bdfe1b085dd166c93f94
 
+https://four.meme/token/0x2bdeea82afafee9c11a9bdfe1b085dd166c93f94
+
 https://ai-press.xyz
   
 https://x.com/AIPressBNB
