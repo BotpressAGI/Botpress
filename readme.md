@@ -1,16 +1,15 @@
-# BabyAGI
+# CeleryAI
 
 > [!NOTE]
-> The original BabyAGI from March 2023 introduced task planning as a method for developing autonomous agents. This project has been archived and moved to the [babyagi_archive](https://github.com/yoheinakajima/babyagi_archive) repo (September 2024 snapshot).
+> The original CeleryAI from March 2023 introduced task planning as a method for developing autonomous agents. This project has been archived and moved to the [CeleryAI_archive](https://github.com/CeleryAI/CeleryAI) repo (September 2024 snapshot).
 
 > [!CAUTION]
 > This is a framework built by Yohei who has never held a job as a developer. The purpose of this repo is to share ideas and spark discussion and for experienced devs to play with. Not meant for production use. Use with cautioun.
 
 ---
 
-This newest BabyAGI is an experimental framework for a self-building autonomous agent. Earlier efforts to expand BabyAGI have made it clear that the optimal way to build a general autonomous agent is to build the simplest thing that can build itself.
+This newest CeleryAI is an experimental framework for a self-building autonomous agent. Earlier efforts to expand CeleryAI have made it clear that the optimal way to build a general autonomous agent is to build the simplest thing that can build itself.
 
-Check out [this introductory X/Twitter thread](https://x.com/yoheinakajima/status/1840678823681282228) for a simple overview.
 
 The core is a new function framework (**functionz**) for storing, managing, and executing functions from a database. It offers a graph-based structure for tracking imports, dependent functions, and authentication secrets, with automatic loading and comprehensive logging capabilities. Additionally, it comes with a dashboard for managing functions, running updates, and viewing logs.
 
@@ -34,49 +33,49 @@ The core is a new function framework (**functionz**) for storing, managing, and 
 
 To quickly check out the dashboard and see how it works:
 
-1. **Install BabyAGI:**
+1. **Install CeleryAI:**
 
     ```bash
-    pip install babyagi
+    pip install CeleryAI
     ```
 
-2. **Import BabyAGI and load the dashboard:**
+2. **Import CeleryAI and load the dashboard:**
 
     ```python
-    import babyagi
+    import CeleryAI
 
     if __name__ == "__main__":
-        app = babyagi.create_app('/dashboard')
+        app = CeleryAI.create_app('/dashboard')
         app.run(host='0.0.0.0', port=8080)
     ```
 
 3. **Navigate to the dashboard:**
 
-    Open your browser and go to `http://localhost:8080/dashboard` to access the BabyAGI dashboard.
+    Open your browser and go to `http://localhost:8080/dashboard` to access the CeleryAI dashboard.
     
 ## Basic Usage
 
-Start by importing `babyagi` and registering your functions. Here's how to register two functions, where one depends on the other:
+Start by importing `CeleryAI` and registering your functions. Here's how to register two functions, where one depends on the other:
 
 ```python
-import babyagi
+import CeleryAI
 
 # Register a simple function
-@babyagi.register_function()
+@CeleryAI.register_function()
 def world():
     return "world"
 
 # Register a function that depends on 'world'
-@babyagi.register_function(dependencies=["world"])
+@CeleryAI.register_function(dependencies=["world"])
 def hello_world():
     x = world()
     return f"Hello {x}!"
 
 # Execute the function
-print(babyagi.hello_world())  # Output: Hello world!
+print(CeleryAI.hello_world())  # Output: Hello world!
 
 if __name__ == "__main__":
-    app = babyagi.create_app('/dashboard')
+    app = CeleryAI.create_app('/dashboard')
     app.run(host='0.0.0.0', port=8080)
 ```
 
@@ -85,9 +84,9 @@ if __name__ == "__main__":
 Functions can be registered with metadata to enhance their capabilities and manage their relationships. Here's a more comprehensive example of function metadata, showing logical usage of all fields:
 
 ```python
-import babyagi
+import CeleryAI
 
-@babyagi.register_function(
+@CeleryAI.register_function(
     imports=["math"],
     dependencies=["circle_area"],
     key_dependencies=["openai_api_key"],
@@ -110,17 +109,17 @@ def cylinder_volume(radius, height):
 
 ## Function Loading
 
-In addition to using `register_function`, you can use `load_function` to load plugins or draft packs of functions. BabyAGI comes with built-in function packs, or you can load your own packs by pointing to the file path.
+In addition to using `register_function`, you can use `load_function` to load plugins or draft packs of functions. CeleryAI comes with built-in function packs, or you can load your own packs by pointing to the file path.
 
-You can find available function packs in `babyagi/functionz/packs`.
+You can find available function packs in `CeleryAI/functionz/packs`.
 
 **Loading Custom Function Packs:**
 
 ```python
-import babyagi
+import CeleryAI
 
 # Load your custom function pack
-babyagi.load_functions("path/to/your/custom_functions.py")
+CeleryAI.load_functions("path/to/your/custom_functions.py")
 ```
 
 This approach makes function building and management easier by organizing related functions into packs.
@@ -132,10 +131,10 @@ You can store `key_dependencies` directly from your code or manage them via the 
 **Storing Key Dependencies from Code:**
 
 ```python
-import babyagi
+import CeleryAI
 
 # Add a secret key
-babyagi.add_key_wrapper('openai_api_key', 'your_openai_api_key')
+CeleryAI.add_key_wrapper('openai_api_key', 'your_openai_api_key')
 ```
 
 **Adding Key Dependencies via Dashboard:**
@@ -144,11 +143,11 @@ Navigate to the dashboard and use the **add_key_wrapper** feature to securely ad
 
 ## Execution Environment
 
-BabyAGI automatically loads essential function packs and manages their dependencies, ensuring a seamless execution environment. Additionally, it logs all activities, including the relationships between functions, to provide comprehensive tracking of function executions and dependencies.
+CeleryAI automatically loads essential function packs and manages their dependencies, ensuring a seamless execution environment. Additionally, it logs all activities, including the relationships between functions, to provide comprehensive tracking of function executions and dependencies.
 
 ### Log
 
-BabyAGI implements a comprehensive logging system to track all function executions and their interactions. The logging mechanism ensures that every function call, including its inputs, outputs, execution time, and any errors, is recorded for monitoring and debugging purposes.
+CeleryAI implements a comprehensive logging system to track all function executions and their interactions. The logging mechanism ensures that every function call, including its inputs, outputs, execution time, and any errors, is recorded for monitoring and debugging purposes.
 
 **Key Logging Features:**
 
@@ -166,11 +165,11 @@ BabyAGI implements a comprehensive logging system to track all function executio
 
 Triggers are mechanisms that allow certain functions to be automatically executed in response to specific events or actions within the system. For example, when a function is added or updated, a trigger can initiate the generation of a description for that function.
 
-Triggers enhance the autonomy of BabyAGI by enabling automated workflows and reducing the need for manual intervention. However, it's essential to manage triggers carefully to avoid unintended recursive executions or conflicts between dependent functions.
+Triggers enhance the autonomy of CeleryAI by enabling automated workflows and reducing the need for manual intervention. However, it's essential to manage triggers carefully to avoid unintended recursive executions or conflicts between dependent functions.
 
 ## Dashboard
 
-The BabyAGI dashboard offers a user-friendly interface for managing functions, monitoring executions, and handling configurations. Key features include:
+The CeleryAI dashboard offers a user-friendly interface for managing functions, monitoring executions, and handling configurations. Key features include:
 
 - **Function Management:** Register, deregister, and update functions directly from the dashboard.
 
@@ -184,10 +183,10 @@ The BabyAGI dashboard offers a user-friendly interface for managing functions, m
 
 **Accessing the Dashboard:**
 
-After running your application, navigate to `http://localhost:8080/dashboard` to access the BabyAGI dashboard.
+After running your application, navigate to `http://localhost:8080/dashboard` to access the CeleryAI dashboard.
 ## Pre-loaded Functions Summary
 
-BabyAGI includes two pre-loaded function packs:
+CeleryAI includes two pre-loaded function packs:
 
 1. **Default Functions (`packs/default_functions.py`):**
    - **Function Execution:** Run, add, update, or retrieve functions and versions.
@@ -201,7 +200,7 @@ BabyAGI includes two pre-loaded function packs:
 
 ## Running a Self-Building Agent
 
-BabyAGI includes two experimental self-building agents, showcasing how the framework can help a self-building coding agent leverage existing functions to write new ones.
+CeleryAI includes two experimental self-building agents, showcasing how the framework can help a self-building coding agent leverage existing functions to write new ones.
 
 ### 1. `process_user_input` in the `code_writing_functions` pack
 
@@ -210,12 +209,12 @@ This function first determines whether to use an existing function or generate n
 Try this:
 
 ~~~python
-import babyagi
+import CeleryAI
 
-babyagi.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
-babyagi.load_functions("drafts/code_writing_functions")
+CeleryAI.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
+CeleryAI.load_functions("drafts/code_writing_functions")
 
-babyagi.process_user_input("Grab today's score from ESPN and email it to test@test.com")
+CeleryAI.process_user_input("Grab today's score from ESPN and email it to test@test.com")
 ~~~
 
 When you run this, you will see the functions being generated in the shell and new functions will be available in the dashboard once completed.
@@ -227,20 +226,19 @@ This function takes a user description and generates X distinct tasks that a use
 Try this:
 
 ~~~python
-import babyagi
+import CeleryAI
 
-babyagi.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
-babyagi.load_functions("drafts/code_writing_functions")
-babyagi.load_functions("drafts/self_build")
+CeleryAI.add_key_wrapper('openai_api_key', os.environ['OPENAI_API_KEY'])
+CeleryAI.load_functions("drafts/code_writing_functions")
+CeleryAI.load_functions("drafts/self_build")
 
-babyagi.self_build("A sales person at an enterprise SaaS company.", 3)
+CeleryAI.self_build("A sales person at an enterprise SaaS company.", 3)
 ~~~
 
 This will generate 3 distinct tasks a salesperson might ask an AI assistant and create functions to handle those.
 
 *The functions will be generated and stored in the dashboard, but note that the generated code is minimal and may need improvement.
 
-![alt text](https://github.com/yoheinakajima/babyagi_staging/blob/main/self_build.png?raw=true)
 
 
 
@@ -253,6 +251,4 @@ Contributions are greatly appreciatedly, but candidly I have not been great at m
 
 If you are a dev, investor, friend of open-source and interesting supporting AI work I do, please fill [this form](https://forms.gle/UZLyT75HQULr8XNUA) (I have a few fun initiatives coming up!)
 
-## License
 
-BabyAGI is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
