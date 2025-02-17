@@ -6,7 +6,7 @@ LuminMind CA: 0xbb2f9c884da71dd18b80cd990aae1109054d9549
 
 https://luminmind.me
 
-https://github.com/LuminMind/LuminMind
+https://x.com/LuminMind
 
 https://four.meme/token/0xbb2f9c884da71dd18b80cd990aae1109054d9549
 
