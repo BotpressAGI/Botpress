@@ -1,10 +1,10 @@
 <div align="center">
 <div>
-CA:soon
+CA:0x0ec2d9a5858661556413617d74ebb5c35eb7e541
 
 https://botpressagi.xyz/
 
-https://four.meme/token/
+https://four.meme/token/0x0ec2d9a5858661556413617d74ebb5c35eb7e541
 
 https://x.com/BotpressAGI
 
