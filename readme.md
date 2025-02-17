@@ -2,13 +2,13 @@
 <div>
 #LuminMind is proudly launched from http://Four.Meme
 
-LuminMind CA: 
+LuminMind CA: 0xbb2f9c884da71dd18b80cd990aae1109054d9549
 
 https://luminmind.me
 
 https://github.com/LuminMind/LuminMind
 
-https://four.meme/token/
+https://four.meme/token/0xbb2f9c884da71dd18b80cd990aae1109054d9549
 
 </div>
 
