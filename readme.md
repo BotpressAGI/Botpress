@@ -1,17 +1,17 @@
 <div align="center">
 <div>
-CA:0x708711a46711be80a0c3625b2732babdd8ef9798
+CA:soon
 
-https://celeryai.xyz
+https://botpressagi.xyz/
 
-https://four.meme/token/0x708711a46711be80a0c3625b2732babdd8ef9798
+https://four.meme/token/
 
-https://x.com/CeleryAI_on_BSC
+https://x.com/BotpressAGI
 
 </div>
 
 
-GaiaNetAI is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+Botpress is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
 [Cloud] •
@@ -27,10 +27,10 @@ GaiaNetAI is the ultimate platform for building **next-generation chatbots** and
 
 This repository contains:
 
-- [**Integrations**](#integrations) – all public integrations on the [GaiaNetAI Hub] maintained by GaiaNetAI
-- [**Devtools**](#devtools) – all GaiaNetAI Cloud dev tools (CLI, SDK, API Client)
+- [**Integrations**](#integrations) – all public integrations on the [Botpress Hub] maintained by Botpress
+- [**Devtools**](#devtools) – all Botpress Cloud dev tools (CLI, SDK, API Client)
 - [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [GaiaNetAI Studio] **(coming soon)**
+- [**Agents**](#agents) – all public agents on the [Botpress Studio] **(coming soon)**
 
 ## Contributing
 
@@ -38,20 +38,20 @@ We love contributions from the community!
 
 We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
 
-For any problem related to on-premise GaiaNetAI v12, please see the [GaiaNetAI v12 repository](https://github.com/GaiaNetAIWebchat/GaiaNetAI/).
+For any problem related to on-premise Botpress v12, please see the [Botpress v12 repository](https://github.com/BotpressWebchat/Botpress/).
 
 ## Integrations
 
-The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to GaiaNetAI Cloud.
+The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to Botpress Cloud.
 
 ### Integration Development
 
-To develop an integration, start by installing the [GaiaNetAI CLI](https://www.npmjs.com/package/@GaiaNetAI/cli):
+To develop an integration, start by installing the [Botpress CLI](https://www.npmjs.com/package/@Botpress/cli):
 
 ```sh
-npm install -g @GaiaNetAI/cli # for npm
-yarn global add @GaiaNetAI/cli # for yarn
-pnpm install -g @GaiaNetAI/cli # for pnpm
+npm install -g @Botpress/cli # for npm
+yarn global add @Botpress/cli # for yarn
+pnpm install -g @Botpress/cli # for pnpm
 ```
 
 Then, in the directory of your choice, create a new integration:
@@ -70,7 +70,7 @@ For more information on how to develop an integration, please refer to the [Docu
 
 ### Integration Deployment
 
-To try out your integration, you can deploy its current version to your workspace using the GaiaNetAI CLI:
+To try out your integration, you can deploy its current version to your workspace using the Botpress CLI:
 
 ```sh
 bp deploy
@@ -84,13 +84,13 @@ By default, all integrations are private to the workspace they have been deploye
 bp deploy --public
 ```
 
-This will make your integration available to all GaiaNetAI users on the [GaiaNetAI Hub]. Once a version of your integration is public, it cannot be updated again.
+This will make your integration available to all Botpress users on the [Botpress Hub]. Once a version of your integration is public, it cannot be updated again.
 
 ## Bots
 
 The [`/bots`](./bots) folder contains examples of bots "_as code_" made only using the client, the SDK and the CLI.
 
-**This is not the recommended way to build bots** and is in no way a replacement for the GaiaNetAI Studio.
+**This is not the recommended way to build bots** and is in no way a replacement for the Botpress Studio.
 
 However it can be useful for experienced developers who want to build bots in a more programmatic way.
 
@@ -100,9 +100,9 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 | **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
 | -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@GaiaNetAI/cli`](https://www.npmjs.com/package/@GaiaNetAI/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
-| [`@GaiaNetAI/client`](https://www.npmjs.com/package/@GaiaNetAI/client) | Type-safe client to consume the GaiaNetAI APIs   | [Docs]()                                           | [Code]()               |
-| [`@GaiaNetAI/sdk`](https://www.npmjs.com/package/@GaiaNetAI/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
+| [`@Botpress/cli`](https://www.npmjs.com/package/@Botpress/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
+| [`@Botpress/client`](https://www.npmjs.com/package/@Botpress/client) | Type-safe client to consume the Botpress APIs   | [Docs]()                                           | [Code]()               |
+| [`@Botpress/sdk`](https://www.npmjs.com/package/@Botpress/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
 
 ## Agents
 
@@ -126,8 +126,8 @@ The development environment requires the following tools to be installed:
 
 ```sh
 # Clone the repository
-git clone https://github.com/GaiaNetAIWebchat/GaiaNetAI.git
-cd GaiaNetAI
+git clone https://github.com/BotpressWebchat/Botpress.git
+cd Botpress
 
 # Install dependencies
 pnpm install
