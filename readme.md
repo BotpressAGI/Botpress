@@ -1,6 +1,12 @@
 <div align="center">
 <div>
+CA:0x708711a46711be80a0c3625b2732babdd8ef9798
 
+https://celeryai.xyz
+
+https://four.meme/token/0x708711a46711be80a0c3625b2732babdd8ef9798
+
+https://x.com/CeleryAI_on_BSC
 
 </div>
 
