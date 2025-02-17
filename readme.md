@@ -1,10 +1,10 @@
 <div align="center">
 <div>
-CA:0x0ec2d9a5858661556413617d74ebb5c35eb7e541
+CA:
 
 https://botpressagi.xyz/
 
-https://four.meme/token/0x0ec2d9a5858661556413617d74ebb5c35eb7e541
+https://four.meme/token/
 
 https://x.com/BotpressAGI
 
