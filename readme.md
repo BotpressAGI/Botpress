@@ -1,5 +1,10 @@
 <div align="center">
 <div>
+CA: 0xc4883e895c8a216a59a5a0a1e4023f998fdf581c
+  
+https://gaianetai.xyz
+
+https://x.com/GaiaNetAI_BNB
 
 </div>
 
