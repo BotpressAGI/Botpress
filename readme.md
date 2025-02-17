@@ -2,14 +2,7 @@
 <div>
 
 </div>
-# LuminMind
-CA: 0x8e326f70d68a5077006ee80dc13c5304d9c2aca3
 
-https://four.meme/token/0x8e326f70d68a5077006ee80dc13c5304d9c2aca3
-
-https://luminmind.me
-
-https://x.com/LuminMind
 
 LuminMind is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
