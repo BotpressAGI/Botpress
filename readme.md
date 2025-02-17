@@ -4,7 +4,7 @@
 </div>
 
 
-LuminMind is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
+GaiaNetAI is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
 [Cloud] •
@@ -20,10 +20,10 @@ LuminMind is the ultimate platform for building **next-generation chatbots** and
 
 This repository contains:
 
-- [**Integrations**](#integrations) – all public integrations on the [LuminMind Hub] maintained by LuminMind
-- [**Devtools**](#devtools) – all LuminMind Cloud dev tools (CLI, SDK, API Client)
+- [**Integrations**](#integrations) – all public integrations on the [GaiaNetAI Hub] maintained by GaiaNetAI
+- [**Devtools**](#devtools) – all GaiaNetAI Cloud dev tools (CLI, SDK, API Client)
 - [**Bots**](#bots) - some example of bots "_as code_" made only using the SDK and the CLI
-- [**Agents**](#agents) – all public agents on the [LuminMind Studio] **(coming soon)**
+- [**Agents**](#agents) – all public agents on the [GaiaNetAI Studio] **(coming soon)**
 
 ## Contributing
 
@@ -31,20 +31,20 @@ We love contributions from the community!
 
 We welcome pull requests and issues relevant for any code contained in this repository. See the [This Repository](#this-repository) section for more details.
 
-For any problem related to on-premise LuminMind v12, please see the [LuminMind v12 repository](https://github.com/LuminMindWebchat/LuminMind/).
+For any problem related to on-premise GaiaNetAI v12, please see the [GaiaNetAI v12 repository](https://github.com/GaiaNetAIWebchat/GaiaNetAI/).
 
 ## Integrations
 
-The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to LuminMind Cloud.
+The [`/integrations`](./integrations) folder contains all our public and open-source integrations. We invite the community to contribute their own integrations to GaiaNetAI Cloud.
 
 ### Integration Development
 
-To develop an integration, start by installing the [LuminMind CLI](https://www.npmjs.com/package/@LuminMind/cli):
+To develop an integration, start by installing the [GaiaNetAI CLI](https://www.npmjs.com/package/@GaiaNetAI/cli):
 
 ```sh
-npm install -g @LuminMind/cli # for npm
-yarn global add @LuminMind/cli # for yarn
-pnpm install -g @LuminMind/cli # for pnpm
+npm install -g @GaiaNetAI/cli # for npm
+yarn global add @GaiaNetAI/cli # for yarn
+pnpm install -g @GaiaNetAI/cli # for pnpm
 ```
 
 Then, in the directory of your choice, create a new integration:
@@ -63,7 +63,7 @@ For more information on how to develop an integration, please refer to the [Docu
 
 ### Integration Deployment
 
-To try out your integration, you can deploy its current version to your workspace using the LuminMind CLI:
+To try out your integration, you can deploy its current version to your workspace using the GaiaNetAI CLI:
 
 ```sh
 bp deploy
@@ -77,13 +77,13 @@ By default, all integrations are private to the workspace they have been deploye
 bp deploy --public
 ```
 
-This will make your integration available to all LuminMind users on the [LuminMind Hub]. Once a version of your integration is public, it cannot be updated again.
+This will make your integration available to all GaiaNetAI users on the [GaiaNetAI Hub]. Once a version of your integration is public, it cannot be updated again.
 
 ## Bots
 
 The [`/bots`](./bots) folder contains examples of bots "_as code_" made only using the client, the SDK and the CLI.
 
-**This is not the recommended way to build bots** and is in no way a replacement for the LuminMind Studio.
+**This is not the recommended way to build bots** and is in no way a replacement for the GaiaNetAI Studio.
 
 However it can be useful for experienced developers who want to build bots in a more programmatic way.
 
@@ -93,9 +93,9 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 | **Package**                                                          | **Description**                                 | **Docs**                                           | **Code**               |
 | -------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- | ---------------------- |
-| [`@LuminMind/cli`](https://www.npmjs.com/package/@LuminMind/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
-| [`@LuminMind/client`](https://www.npmjs.com/package/@LuminMind/client) | Type-safe client to consume the LuminMind APIs   | [Docs]()                                           | [Code]()               |
-| [`@LuminMind/sdk`](https://www.npmjs.com/package/@LuminMind/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
+| [`@GaiaNetAI/cli`](https://www.npmjs.com/package/@GaiaNetAI/cli)       | Build and deploy private or public integrations | [Docs]() | [Code](./packages/cli) |
+| [`@GaiaNetAI/client`](https://www.npmjs.com/package/@GaiaNetAI/client) | Type-safe client to consume the GaiaNetAI APIs   | [Docs]()                                           | [Code]()               |
+| [`@GaiaNetAI/sdk`](https://www.npmjs.com/package/@GaiaNetAI/sdk)       | SDK used by to build integrations               | [Docs]()                                           | [Code]()               |
 
 ## Agents
 
@@ -119,8 +119,8 @@ The development environment requires the following tools to be installed:
 
 ```sh
 # Clone the repository
-git clone https://github.com/LuminMindWebchat/LuminMind.git
-cd LuminMind
+git clone https://github.com/GaiaNetAIWebchat/GaiaNetAI.git
+cd GaiaNetAI
 
 # Install dependencies
 pnpm install
