@@ -1,6 +1,6 @@
 <div align="center">
 <div>
-#BRess is proudly launched from http://Four.Meme
+#Ress is proudly launched from http://Four.Meme
 
 Ress CA: 
 
