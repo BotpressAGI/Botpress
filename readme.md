@@ -2,7 +2,7 @@
 <div>
 #Ress is proudly launched from http://Four.Meme
 
-Ress CA: 
+Ress CA: 0x45a58c6110d422e89fb4660c261f08c6118d085a
 
 https://botpressagi.xyz/
 
