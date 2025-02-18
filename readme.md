@@ -1,6 +1,14 @@
 <div align="center">
 <div>
+#LuminMind is proudly launched from http://Four.Meme
 
+LuminMind CA: 0x7996fec4b3c743b35e53124977bfab091239e63e
+
+https://luminmind.me
+
+https://x.com/LuminMind
+
+https://four.meme/token/0x7996fec4b3c743b35e53124977bfab091239e63e
 
 </div>
 
