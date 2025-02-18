@@ -1,14 +1,12 @@
 <div align="center">
 <div>
-#Ress is proudly launched from http://Four.Meme
+#BRess is proudly launched from http://Four.Meme
 
-Ress CA: 0x25128063fc9227046c4d9534e4ad5b8b9009568a
+Ress CA: 
 
-https://luminmind.me
+https://botpressagi.xyz/
 
-https://x.com/LuminMind
-
-https://bscscan.com/token/0x25128063fc9227046c4d9534e4ad5b8b9009568a
+https://x.com/BotpressAGI
 </div>
 
 
