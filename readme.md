@@ -1,15 +1,14 @@
 <div align="center">
 <div>
-#LuminMind is proudly launched from http://Four.Meme
+#Ress is proudly launched from http://Four.Meme
 
-LuminMind CA: 0x7996fec4b3c743b35e53124977bfab091239e63e
+Ress CA: 0x25128063fc9227046c4d9534e4ad5b8b9009568a
 
 https://luminmind.me
 
 https://x.com/LuminMind
 
-https://four.meme/token/0x7996fec4b3c743b35e53124977bfab091239e63e
-
+https://bscscan.com/token/0x25128063fc9227046c4d9534e4ad5b8b9009568a
 </div>
 
 
