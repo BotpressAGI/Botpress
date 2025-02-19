@@ -1,8 +1,8 @@
 <div align="center">
 <div>
-#Ress is proudly launched from http://Four.Meme
+CA: 0x6a2cf1b252dbac268215a57e8843a61e5bf1b872
 
-Ress CA: 
+https://four.meme/token/0x6a2cf1b252dbac268215a57e8843a61e5bf1b872
 
 https://botpressagi.xyz/
 
