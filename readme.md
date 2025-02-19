@@ -1,12 +1,13 @@
 <div align="center">
 <div>
-CA: 0x6a2cf1b252dbac268215a57e8843a61e5bf1b872
+CA: 0xcbd1adbe42e65f53223f73b5f3308404c865e0da
 
-https://four.meme/token/0x6a2cf1b252dbac268215a57e8843a61e5bf1b872
+https://four.meme/token/0xcbd1adbe42e65f53223f73b5f3308404c865e0da
 
 https://botpressagi.xyz/
 
-https://x.com/BotpressAGI
+
+#BSC #FOURMeme #broccoli #cz #f3b #bnb #AI  #fourmeme
 </div>
 
 
