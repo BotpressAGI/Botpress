@@ -1,9 +1,4 @@
 <div align="center">
-  https://four.meme/token/0x5c339e896af0141db77e2c5f29c25a2d16a83aa8
-<div>
-
-
-</div>
 
 
 botpressa is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
