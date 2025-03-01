@@ -1,6 +1,10 @@
 <div align="center">
-
-
+<div>
+https://x.com/BotpressAGI
+https://botpressagi.xyz/
+https://odin.fun/
+</div>
+  
 botpressa is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
 
 [Getting started](#getting-started) •
