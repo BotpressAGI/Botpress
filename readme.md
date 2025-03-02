@@ -5,6 +5,7 @@ https://x.com/BotpressAGI
 
 https://botpressagi.xyz/
 
+https://odin.fun/token/2nkt
 </div>
   
 botpressa is the ultimate platform for building **next-generation chatbots** and assistants powered by OpenAI. Start building incredible assistants for your projects or businesses at lightning speed.
