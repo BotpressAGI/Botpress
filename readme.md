@@ -2,8 +2,6 @@
 <div>
 https://x.com/BotpressAGI
 
-https://four.meme/token/0x4c2bcf697712fd2600925fa541344c3085a0fe35
-
 https://botpressagi.xyz/
 
 </div>
