@@ -1,6 +1,5 @@
 <div align="center">
 <div>
-https://four.meme/token/0x0691edca494e89e0591ff40138e160f11a018f98
   
 https://x.com/BotpressAGI
 
